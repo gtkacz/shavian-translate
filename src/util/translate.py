@@ -1,7 +1,6 @@
 from collections.abc import Sequence
 
 from ipapy import is_valid_ipa
-from ipapy.ipastring import IPAString
 
 from src.enums.shavian import Shavian
 from src.util.unicode import unicode_to_string
@@ -23,9 +22,7 @@ def translate_ipa_to_shavian(text: str) -> Sequence[Shavian]:
 	if not is_valid_ipa(text):
 		raise ValueError(f"Invalid IPA input: {text}")
 
-	ipa = IPAString(unicode_string=text)
-
-	raw_output = [Shavian.from_pronunciation(char, raise_errors=False) for char in ipa]
+	raw_output = [Shavian.from_pronunciation(char, raise_errors=False) for char in text]
 
 	if not raw_output:
 		raise ValueError(f"Could not translate IPA to Shavian: {text}")
@@ -66,7 +63,7 @@ def translate_ipa_to_shavian_str(text: str) -> str:
 	"""
 	raw_output = translate_ipa_to_shavian(text)
 
-	output = [unicode_to_string(char) for char in raw_output if char]
+	output = [unicode_to_string(char.unicode) for char in raw_output if char]
 
 	return "".join(output)
 

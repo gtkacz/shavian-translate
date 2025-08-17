@@ -1,5 +1,4 @@
-ruff
-pre-commit
 gruut-ipa
 ipapy
 phonemizer
+litestar[standard]

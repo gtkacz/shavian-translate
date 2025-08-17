@@ -1,0 +1,1 @@
+litestar --app=src.core.app:app run --debug --reload
