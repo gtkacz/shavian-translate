@@ -1,4 +1,4 @@
-from enum import Enum, StrEnum
+from enum import Enum, StrEnum, auto
 
 
 # https://www.unicode.org/charts/PDF/U10450.pdf
@@ -130,67 +130,124 @@ class ShavianPronunciation(StrEnum):
 
 
 class Shavian(Enum):
-	"""Combined enum for Shavian characters with unicode and pronunciation properties."""
-
-	def __init__(self, unicode_val: str, pronunciation_val: str) -> None:  # noqa: D107
-		self.unicode = unicode_val
-		self.pronunciation = pronunciation_val
+	"""Enum for Shavian characters with unicode and pronunciation properties."""
 
 	# Tall
-	PEEP = (ShavianUnicode.PEEP, ShavianPronunciation.PEEP)
-	TOT = (ShavianUnicode.TOT, ShavianPronunciation.TOT)
-	KICK = (ShavianUnicode.KICK, ShavianPronunciation.KICK)
-	FEE = (ShavianUnicode.FEE, ShavianPronunciation.FEE)
-	THIGH = (ShavianUnicode.THIGH, ShavianPronunciation.THIGH)
-	SO = (ShavianUnicode.SO, ShavianPronunciation.SO)
-	SURE = (ShavianUnicode.SURE, ShavianPronunciation.SURE)
-	CHURCH = (ShavianUnicode.CHURCH, ShavianPronunciation.CHURCH)
-	YEA = (ShavianUnicode.YEA, ShavianPronunciation.YEA)
-	HUNG = (ShavianUnicode.HUNG, ShavianPronunciation.HUNG)
+	PEEP = auto()
+	TOT = auto()
+	KICK = auto()
+	FEE = auto()
+	THIGH = auto()
+	SO = auto()
+	SURE = auto()
+	CHURCH = auto()
+	YEA = auto()
+	HUNG = auto()
 
 	# Deep
-	BIB = (ShavianUnicode.BIB, ShavianPronunciation.BIB)
-	DEAD = (ShavianUnicode.DEAD, ShavianPronunciation.DEAD)
-	GAG = (ShavianUnicode.GAG, ShavianPronunciation.GAG)
-	VOW = (ShavianUnicode.VOW, ShavianPronunciation.VOW)
-	THEY = (ShavianUnicode.THEY, ShavianPronunciation.THEY)
-	ZOO = (ShavianUnicode.ZOO, ShavianPronunciation.ZOO)
-	MEASURE = (ShavianUnicode.MEASURE, ShavianPronunciation.MEASURE)
-	JUDGE = (ShavianUnicode.JUDGE, ShavianPronunciation.JUDGE)
-	WOE = (ShavianUnicode.WOE, ShavianPronunciation.WOE)
-	HAHA = (ShavianUnicode.HAHA, ShavianPronunciation.HAHA)
+	BIB = auto()
+	DEAD = auto()
+	GAG = auto()
+	VOW = auto()
+	THEY = auto()
+	ZOO = auto()
+	MEASURE = auto()
+	JUDGE = auto()
+	WOE = auto()
+	HAHA = auto()
 
 	# Short
-	LOLL = (ShavianUnicode.LOLL, ShavianPronunciation.LOLL)
-	MIME = (ShavianUnicode.MIME, ShavianPronunciation.MIME)
-	IF = (ShavianUnicode.IF, ShavianPronunciation.IF)
-	EGG = (ShavianUnicode.EGG, ShavianPronunciation.EGG)
-	ASH = (ShavianUnicode.ASH, ShavianPronunciation.ASH)
-	ADO = (ShavianUnicode.ADO, ShavianPronunciation.ADO)
-	ON = (ShavianUnicode.ON, ShavianPronunciation.ON)
-	WOOL = (ShavianUnicode.WOOL, ShavianPronunciation.WOOL)
-	OUT = (ShavianUnicode.OUT, ShavianPronunciation.OUT)
-	AH = (ShavianUnicode.AH, ShavianPronunciation.AH)
-	ROAR = (ShavianUnicode.ROAR, ShavianPronunciation.ROAR)
-	NUN = (ShavianUnicode.NUN, ShavianPronunciation.NUN)
-	EAT = (ShavianUnicode.EAT, ShavianPronunciation.EAT)
-	AGE = (ShavianUnicode.AGE, ShavianPronunciation.AGE)
-	ICE = (ShavianUnicode.ICE, ShavianPronunciation.ICE)
-	UP = (ShavianUnicode.UP, ShavianPronunciation.UP)
-	OAK = (ShavianUnicode.OAK, ShavianPronunciation.OAK)
-	OOZE = (ShavianUnicode.OOZE, ShavianPronunciation.OOZE)
-	OIL = (ShavianUnicode.OIL, ShavianPronunciation.OIL)
-	AWE = (ShavianUnicode.AWE, ShavianPronunciation.AWE)
+	LOLL = auto()
+	MIME = auto()
+	IF = auto()
+	EGG = auto()
+	ASH = auto()
+	ADO = auto()
+	ON = auto()
+	WOOL = auto()
+	OUT = auto()
+	AH = auto()
+	ROAR = auto()
+	NUN = auto()
+	EAT = auto()
+	AGE = auto()
+	ICE = auto()
+	UP = auto()
+	OAK = auto()
+	OOZE = auto()
+	OIL = auto()
+	AWE = auto()
 
 	# Compound
-	ARE = (ShavianUnicode.ARE, ShavianPronunciation.ARE)
-	OR = (ShavianUnicode.OR, ShavianPronunciation.OR)
-	AIR = (ShavianUnicode.AIR, ShavianPronunciation.AIR)
-	ERR = (ShavianUnicode.ERR, ShavianPronunciation.ERR)
-	ARRAY = (ShavianUnicode.ARRAY, ShavianPronunciation.ARRAY)
-	EAR = (ShavianUnicode.EAR, ShavianPronunciation.EAR)
-	IAN = (ShavianUnicode.IAN, ShavianPronunciation.IAN)
-	YEW = (ShavianUnicode.YEW, ShavianPronunciation.YEW)
+	ARE = auto()
+	OR = auto()
+	AIR = auto()
+	ERR = auto()
+	ARRAY = auto()
+	EAR = auto()
+	IAN = auto()
+	YEW = auto()
 
 	# Namer
-	NAMER = (ShavianUnicode.NAMER, ShavianPronunciation.NAMER)
+	NAMER = auto()
+
+	# Empty
+	EMPTY = auto()
+
+	@property
+	def unicode(self) -> str:
+		"""Get the Unicode codepoint for the Shavian character."""
+		return ShavianUnicode[self.name].value if self.name != "EMPTY" else ""
+
+	@property
+	def pronunciation(self) -> str:
+		"""Get the IPA pronunciation for the Shavian character."""
+		return ShavianPronunciation[self.name].value if self.name != "EMPTY" else ""
+
+	@classmethod
+	def from_pronunciation(cls, pronunciation: str, *, raise_errors: bool = True) -> "Shavian":
+		"""
+		Get a Shavian character by its pronunciation.
+
+		Args:
+			pronunciation: The IPA pronunciation of the Shavian character.
+			raise_errors: Whether to raise an error if no match is found.
+
+		Raises:
+			ValueError: If no Shavian character matches the given pronunciation.
+
+		Returns:
+			Shavian: The Shavian character that matches the pronunciation.
+		"""
+		for char in cls:
+			if char.pronunciation == pronunciation or char.pronunciation.replace("/", "") == pronunciation:
+				return char
+
+		if raise_errors:
+			raise ValueError(f"No Shavian character found for pronunciation: {pronunciation}")
+
+		return Shavian.EMPTY
+
+	@classmethod
+	def from_unicode(cls, unicode_str: str, *, raise_errors: bool = True) -> "Shavian":
+		"""
+		Get a Shavian character by its Unicode codepoint.
+
+		Args:
+			unicode_str: The Unicode codepoint of the Shavian character.
+			raise_errors: Whether to raise an error if no match is found.
+
+		Raises:
+			ValueError: If no Shavian character matches the given Unicode codepoint.
+
+		Returns:
+			Shavian: The Shavian character that matches the Unicode codepoint.
+		"""
+		for char in cls:
+			if char.unicode == unicode_str:
+				return char
+
+		if raise_errors:
+			raise ValueError(f"No Shavian character found for unicode: {unicode_str}")
+
+		return Shavian.EMPTY
